@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html, app-root {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+p{
+    margin: 0;
+}

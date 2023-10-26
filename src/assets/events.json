@@ -1,0 +1,36 @@
+{
+    "events": [
+    {
+    "title": "SMART CITY EXPO",
+    "info": "WELCOME.",
+    "time": "8 November | 9:30 - 11:00",
+    "room": "Hall 1 - Red Room"
+},{
+    "title": "TOMORROW.MOBILITY",
+    "info": "WELCOME TO THE NEW URBAN ERA.",
+    "time": "8 November | 9:30 - 11:00",
+    "room": "Hall 2 - Mobility Plaza"
+},{
+    "title": "SMART CITY EXPO",
+    "info": "PUBLIC CODE & TECHNOLOGIES.",
+    "time": "8 November | 9:30 - 11:00",
+    "room": "Hall 1 - Red Room"
+},{
+    "title": "TOMORROW.MOBILITY",
+    "info": "CONGESTION CHARGING SCHEMES.",
+    "time": "8 November | 9:30 - 11:00",
+    "room": "Hall 2 - Mobility Plaza"
+},{
+    "title": "SMART CITY EXPO",
+    "info": "UPCOMING DIGITAL AND DEMOCRAT CHALLENGES FOR EUROPE.",
+    "time": "8 November | 9:30 - 11:00",
+    "room": "Hall 1 - Red Room"
+},{
+    "title": "TOMORROW.MOBILITY",
+    "info": "CONGESTION CHARGING SCHEMES: WAY TO GO FOR MORE LIVEABLE CITIES.",
+    "time": "8 November | 9:30 - 11:00",
+    "room": "Hall 2 - Mobility Plaza"
+}
+    ]
+}
+

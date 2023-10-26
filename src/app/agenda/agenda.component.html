@@ -1,0 +1,125 @@
+
+<!-- *ngIf="selectedEvent && eventCardInfo"  afegir a class modal despres-->
+<div  *ngIf="selectedEvent && eventCardInfo" class="modal">
+
+
+    <div class="modal-header">
+        <div class="back-arrow">
+            <img class="arrow" src="assets/images/backArrow.svg" (click)="goBack()">
+        </div>
+        <div class="event-info">
+            <p class="modal-info">
+                {{ selectedEvent.info}}
+            </p>
+            <p class="modal-time">
+                {{ selectedEvent.time }}
+            </p>
+            <p class="modal-room">
+                {{ selectedEvent.room }}
+            </p>
+        </div>
+    </div>
+    <div class="modal-body">
+        <div class="modal-title">
+            <p class="modal-title-text">
+                {{ selectedEvent.title }}
+            </p>
+        </div>
+
+        <div class="type-bubble">
+            <p class="type-text"> Governance & Economy </p>
+        </div>
+
+        <div class="event-description">
+            <p class="description-text">
+                this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.
+            </p>
+        </div>
+
+        <div class="speaker-content">
+            <p class="speaker-title"> Speaker/s</p>
+
+            <div class="speaker-card">
+                <div class="speakr-img"> 
+                    <img class="speaker-img" src="assets/images/hannah.jpg" alt=""> 
+                </div>
+                <div class="speaker-info">
+
+                    <p class="speaker-name2"> Hannah Abdullah </p>
+                </div>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speakr-img"> 
+                    <img class="speaker-img" src="assets/images/hannah.jpg" alt=""> 
+                </div>
+                <div class="speaker-info">
+
+                    <p class="speaker-name2"> Hannah Abdullah </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bubbles">
+            <app-tags [title]="'Business'"></app-tags>
+            <app-tags [title]="'Collaboration'"></app-tags>
+            <app-tags [title]="'Best practices'"></app-tags>
+        </div>
+    </div>
+</div>
+<div class="main-container">
+    <div class="header">
+        <div class="headerMenu">
+            <div class="menuIcon"> 
+                <img src="assets/images/b_menu.svg" class="burguer-img">
+            </div>
+            <div class="headerTitle">
+                <p class="title"> Agenda</p>
+            </div>
+            <div class="twoIcons">
+                <img src="assets/images/refresh.svg" class="refresh-img">
+                <img src="assets/images/info.svg" class="info-img">
+            </div>
+        </div>
+            <div class="searchBar">
+                <input type="text" class="searchInput" [(ngModel)]="findText" (ngModelChange)="busqueda()" placeholder="">
+                <span id="searchIcon"> <img src="assets/images/searchIcon.svg" ></span>
+                <span id="crossIcon"> <img src="assets/images/crossIcon.svg" ></span>
+
+            </div>
+            <div class="selector">
+                <div class="button">
+                    <button (click)="onClick1()" [ngClass]=" { 'clickedBtn' : isButtonClicked1}" class="selectorBtn" id="btn1">
+                        <p class="btnText"> AGENDA </p>
+                    </button>
+                    
+                    <button (click)="onClick2()" [ngClass]=" { 'clickedBtn' : isButtonClicked2}" class="selectorBtn" id="btn2">
+                        <p class="btnText"> SPEAKER </p>
+                    </button>
+                </div>
+                <div class="barra1" [class.no-active]="!isButtonClicked2" [class.active]="isButtonClicked2"> </div>
+                
+            </div>
+    </div>
+
+    <div class="body">
+        <div class="gradient"> </div>
+        <div *ngIf="isButtonClicked1" class="eventsList"> 
+            <div *ngFor="let event of filteredEvents" >
+                <app-event-card (eventSelected)="getEvent($event)" [event]="event"></app-event-card>
+            </div>
+        </div>
+        <div *ngIf="isButtonClicked2" class="speakersList"> 
+            <!-- <div class="card"  *ngFor="let event of filteredEvents">  -->
+                <div class="speaker-card">
+                    <div class="speaker-img"> <img class="spk-img" src="assets/images/hannah.jpg" alt=""> </div>
+                    <div class="speaker-info">
+                        <p class="speaker-name"> Hannah Abdullah </p>
+                        <p class="speaker-occupation"> Senior Programer Officer </p>
+                        <p class="speaker-company"> German Marhsll Fund of the United States </p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</div>

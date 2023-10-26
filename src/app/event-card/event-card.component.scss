@@ -1,0 +1,62 @@
+p{
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+.card{
+    width: 90vw;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgb( 0 0 0 / 0.2);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .event-title{
+        width: 80vw;
+        height: 25px;
+        display: flex;
+        border-radius: 20px;
+        background-color: #59B1D9;
+        justify-content: center; 
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+        
+    }
+
+    .event-info{
+        width: 100%;
+        display: flex;
+        font-weight: 600;
+        font-size: 12px;
+        margin-top: 5px;   
+        justify-content: start;        
+        max-width: 300px;
+    }
+
+    .event-time{
+        width: 100%;
+        display: flex;
+        font-weight: 400;
+        text-align: left;
+        font-size: 14px;
+        margin-top: 2px;
+        justify-content: start;
+        max-width: 300px;
+    }
+
+    .event-location{
+        width: 100%;
+        display: flex;
+        color: grey;
+        font-size: 12px;
+        justify-content: start;
+        margin-top: 2px;
+        max-width: 300px;
+    }
+
+    
+}
