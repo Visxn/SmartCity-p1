@@ -7,6 +7,7 @@ import { AgendaComponent } from './agenda/agenda.component';
 import { EventService } from './agenda/event.service';
 import { TagsComponent } from './tags/tags.component';
 import { EventCardComponent } from './event-card/event-card.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { EventCardComponent } from './event-card/event-card.component';
     AgendaComponent,
     TagsComponent,
     EventCardComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

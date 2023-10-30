@@ -19,10 +19,7 @@ export class EventCardComponent {
   selectedEvent: Events;
   eventCardInfo = false;
 
-  @Input() title: string;
-  @Input() info: string;
-  @Input() time: string;
-  @Input() room: string;
+  
   @Input() event: Events;
   @Output() eventSelected: EventEmitter<Events> = new EventEmitter<Events>();
 

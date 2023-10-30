@@ -5,6 +5,7 @@ import { Title } from '@angular/platform-browser';
 import eventsJson from '../../assets/events.json';
 import { EventService, Events } from './event.service';
 import { debounceTime } from 'rxjs';
+import { Route, Router } from '@angular/router';
 
 
 @Component({
@@ -27,7 +28,7 @@ export class AgendaComponent {
   eventCardInfo = false;
   
 
-  constructor(private service: EventService) { 
+  constructor(private service: EventService, private router: Router) { 
   }
 
   ngOnInit() {
@@ -84,4 +85,10 @@ export class AgendaComponent {
     this.eventCardInfo = true;
     this.selectedEvent = event;
   }
+
+  openEvent(event: Events) {
+    this.router.navigate(['/modal', event.id]);
+  }
+
+  
 }

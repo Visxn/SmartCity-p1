@@ -1,72 +1,3 @@
-
-<!-- *ngIf="selectedEvent && eventCardInfo"  afegir a class modal despres-->
-<div  *ngIf="selectedEvent && eventCardInfo" class="modal">
-
-
-    <div class="modal-header">
-        <div class="back-arrow">
-            <img class="arrow" src="assets/images/backArrow.svg" (click)="goBack()">
-        </div>
-        <div class="event-info">
-            <p class="modal-info">
-                {{ selectedEvent.info}}
-            </p>
-            <p class="modal-time">
-                {{ selectedEvent.time }}
-            </p>
-            <p class="modal-room">
-                {{ selectedEvent.room }}
-            </p>
-        </div>
-    </div>
-    <div class="modal-body">
-        <div class="modal-title">
-            <p class="modal-title-text">
-                {{ selectedEvent.title }}
-            </p>
-        </div>
-
-        <div class="type-bubble">
-            <p class="type-text"> Governance & Economy </p>
-        </div>
-
-        <div class="event-description">
-            <p class="description-text">
-                this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.this is an example test.
-            </p>
-        </div>
-
-        <div class="speaker-content">
-            <p class="speaker-title"> Speaker/s</p>
-
-            <div class="speaker-card">
-                <div class="speakr-img"> 
-                    <img class="speaker-img" src="assets/images/hannah.jpg" alt=""> 
-                </div>
-                <div class="speaker-info">
-
-                    <p class="speaker-name2"> Hannah Abdullah </p>
-                </div>
-            </div>
-
-            <div class="speaker-card">
-                <div class="speakr-img"> 
-                    <img class="speaker-img" src="assets/images/hannah.jpg" alt=""> 
-                </div>
-                <div class="speaker-info">
-
-                    <p class="speaker-name2"> Hannah Abdullah </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="bubbles">
-            <app-tags [title]="'Business'"></app-tags>
-            <app-tags [title]="'Collaboration'"></app-tags>
-            <app-tags [title]="'Best practices'"></app-tags>
-        </div>
-    </div>
-</div>
 <div class="main-container">
     <div class="header">
         <div class="headerMenu">
@@ -106,7 +37,7 @@
         <div class="gradient"> </div>
         <div *ngIf="isButtonClicked1" class="eventsList"> 
             <div *ngFor="let event of filteredEvents" >
-                <app-event-card (eventSelected)="getEvent($event)" [event]="event"></app-event-card>
+                <app-event-card (eventSelected)="getEvent($event)" [event]="event" (click)="openEvent(event)"></app-event-card>
             </div>
         </div>
         <div *ngIf="isButtonClicked2" class="speakersList"> 
